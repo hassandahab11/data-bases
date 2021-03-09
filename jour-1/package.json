@@ -1,0 +1,22 @@
+{
+  "name": "data-bases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassandahab11/data-bases.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hassandahab11/data-bases/issues"
+  },
+  "homepage": "https://github.com/hassandahab11/data-bases#readme",
+  "dependencies": {
+    "mongoose": "^5.11.19"
+  }
+}
