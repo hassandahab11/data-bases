@@ -12,21 +12,18 @@ const charactersSchema = new mongoose.Schema({
   marque: String,
   modèle: String,
   année: Number,
+  create: Date,
 });
 
 const characterModel = mongoose.model("cars", charactersSchema);
 
-// characterModel.deleteMany({}).then(() => {
-//   characterModel.create([
-//     {
-//       marque: "Renault", modèle: "Espace", année: 1999,
-//     },
-//     {
-//       marque: "Renault", modèle: "Scenic", année: 2004,
-//     },
-//     { marque: "Peugeot", modèle: "308", année: 2017 },
-//   ]);
-// });
+characterModel.deleteMany({}).then(() => {
+  characterModel.create([
+    { marque: "Renault", modèle: "Espace", année: 1999, create: new Date()},
+    { marque: "Renault", modèle: "Scenic", année: 2004, create:  new Date()},
+    { marque: "Peugeot", modèle: "308", année: 2017, create: new Date()},
+  ]);
+});
 
 // characterModel.findById(mongoose.Types.ObjectId("604636a89c9fce33d83ee696")).then((response) => console.log(response));
 
@@ -58,5 +55,5 @@ const characterModel = mongoose.model("cars", charactersSchema);
     //     }
     // }).then((response) => console.log(response)); 
     
-    characterModel.find({ modèle: /o/
-    } ).then((response) => console.log(response)); 
+    // characterModel.find({ modèle: /o/
+    // } ).then((response) => console.log(response)); 
