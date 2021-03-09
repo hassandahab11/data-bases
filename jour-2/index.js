@@ -124,7 +124,7 @@ const charactersSchema = new mongoose.Schema({
   
 
   
- //01
+ // EX 01
 
 //  characterModel.aggregate().group({
 //     _id: { department: "$department", },sum: {$sum: "$population"}
@@ -132,15 +132,28 @@ const charactersSchema = new mongoose.Schema({
 //   })
 //   .then((response) => console.log(response));
 
-// 02
+// EX 02
+
 //   characterModel.aggregate().group({
 //     _id: { department: "$department"}, moyenne: { $avg: "$population" },
 
 //   }).then((response)=> console.log(response));
-//04
+
+// EX 03
+
+// characterModel.aggregate()
+//   .sort({ 
+//        population: 1
+//   })
+//   .then((response) => console.log(response));
+
+// EX 04
+
 // characterModel.aggregate().group({
 //     _id: { department: "$department"},  vile: { $sum: 1 }
-//05
+
+//EX 05
+
 //   }).then((response)=> console.log(response));
 // characterModel.aggregate().match({
 //     city: /^P/
